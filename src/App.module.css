@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-img: url(./resources/bg.jpg);
+  --bg-color: rgba(230, 238, 245, 0.8); 
+}
+
+.App {
+  text-align: center;
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainWindow {
+  background-color: var(--bg-color);
+  min-width: fit-content;
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 0.5%;
+  padding: 0px 15%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  overflow: hidden;
+}

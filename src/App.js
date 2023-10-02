@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import logo from './logo.svg';
-import './App.css';
 import React from 'react';
 import MainContainer from './containers/MainContainer';
+import styles from './App.module.css';
+import TitleComponent from './components/TitleComponent';
 
 const getPerson = async name => {
   let countryID
@@ -52,9 +53,12 @@ const getPerson = async name => {
 
 function App() {
   return (
-    <div className="App">
-      <MainContainer getPerson={getPerson}/>
-    </div>
+    <body className={styles.App}>
+      <section className={styles.MainWindow}>
+        <TitleComponent />
+        <MainContainer getPerson={getPerson}/>
+      </section>
+    </body>
   );
 }
 

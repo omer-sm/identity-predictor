@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+.AppTitle {
+    background-image: url(../resources/title-bg.jpg);
+    background-size: cover;
+    width: auto;
+    padding: 0% 30%;
+    border-radius: calc(1rem + 10%);
+    margin: 3%;
+}
+
+.Title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-family: 'Young Serif', serif;
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 0.05rem black;
+    line-height: 95%;
+    margin: 7.5%;
+}

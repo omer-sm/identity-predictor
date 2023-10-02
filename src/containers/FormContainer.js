@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './FormContainer.module.css'
 
 export default function FormContainer({onSubmit}) {
     const handleSubmit = (e) => {
@@ -10,9 +11,10 @@ export default function FormContainer({onSubmit}) {
         setName(e.target.value)
     }
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="nameInput" value={name} onChange={handleChange} />
-            <button type="submit">Submit</button>
+        <form className={styles.FormContainer} onSubmit={handleSubmit}>
+            <h4 className={styles.TopText} >Enter your name, and find out who the computer thinks you are!</h4>
+            <input className={styles.NameInput} type="text" name="nameInput" value={name} onChange={handleChange} autoComplete="off" placeholder="Name..."/>
+            <button className={styles.SubmitButton} type="submit">Predict!</button>
         </form>
     )
 }

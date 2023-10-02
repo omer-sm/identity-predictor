@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --bg: linear-gradient(0deg, hsl(208, 0%, 90%) 0%, aliceblue 100%);
+    --bg-focused: linear-gradient(0deg, hsl(208, 0%, 40%) 0%, hsl(208, 0%, 47%) 100%);
+    --bg-active: linear-gradient(0deg, hsl(208, 0%, 30%) 50%, hsl(208, 0%, 37%) 100%);
+}
+
+.FormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 1% 0% 0%;
+    width: 70%;
+}
+
+.NameInput {
+    max-width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    border: 0.4rem solid black;
+    background: var(--bg);
+    border-radius: 1rem;
+    transition-duration: 100ms;
+    caret-color: rgb(0, 0, 0, 0.4);
+}
+.NameInput:hover, .NameInput:focus {
+    border: 0.4rem solid rgb(50, 50, 50);
+    
+}
+.TopText {
+    font-size: 1.5rem;
+    max-width: 100%;
+    margin: 1% 0% 4%;
+}
+.SubmitButton {
+    font-size: 2rem;
+    margin: 2% 0%;
+    border-radius: 1rem;
+    background: var(--bg);
+    min-width: 10rem;
+    min-height: 3.5rem;
+    align-self: center;
+}
+.SubmitButton:hover {
+    color: aliceblue;
+    background: var(--bg-focused);
+    cursor: pointer;
+}
+.SubmitButton:active {
+    background: var(--bg-active);
+    color: hsl(208, 10%, 90%);
+}
