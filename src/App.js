@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import logo from './logo.svg';
-import React from 'react';
+import React, {useEffect} from 'react';
 import MainContainer from './containers/MainContainer';
 import styles from './App.module.css';
 import TitleComponent from './components/TitleComponent';
@@ -54,6 +53,9 @@ const getPerson = async name => {
 }
 
 function App() {
+    useEffect(() => {
+        document.title = 'Identity Predictor';
+      }, []);
   return (
     <div className={styles.App}>
       <section className={styles.MainWindow}>
