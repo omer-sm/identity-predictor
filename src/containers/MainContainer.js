@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Results from '../components/Results';
+import ResultsContainer from './ResultsContainer';
 import FormContainer from './FormContainer';
 
 export default function MainContainer({getPerson}) {
@@ -33,7 +33,7 @@ export default function MainContainer({getPerson}) {
     return (
         <>
             <FormContainer onSubmit={handleFormSubmit} />
-            <Results gender={gender} country={country} age={age} state={formState}/>
+            <ResultsContainer gender={gender} country={country} age={age} state={formState}/>
         </>
     )
 }

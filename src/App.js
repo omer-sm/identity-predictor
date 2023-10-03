@@ -21,6 +21,7 @@ const getPerson = async name => {
       }
   } catch (e) {
       console.log(e)
+      return {}
   }
   try {
       const agifyResponse = fetch(`https://api.agify.io?country_id=${countryID}&name=${name}`, {
@@ -48,17 +49,18 @@ const getPerson = async name => {
       return person
   } catch (e) {
       console.log(e)
+      return {}
   }
 }
 
 function App() {
   return (
-    <body className={styles.App}>
+    <div className={styles.App}>
       <section className={styles.MainWindow}>
         <TitleComponent />
         <MainContainer getPerson={getPerson}/>
       </section>
-    </body>
+    </div>
   );
 }
 
